@@ -41,6 +41,11 @@ stages{
 			sh 'mvn snyk:test -fn'
 				}
 			}
-    }		
+       }	
+    stage('Deploy') {
+      steps {
+        echo 'Deploying...'
+      }
+    }
   }
 }
