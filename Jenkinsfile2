@@ -40,7 +40,7 @@ stages{
         echo 'Testing...'
 	}
     }
-   stage('FinalTest') {
+   stage('Post-final-Test') {
       steps {        
           snykSecurity(
           snykInstallation: 'Snyk@latest',
