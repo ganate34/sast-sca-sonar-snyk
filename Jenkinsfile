@@ -7,7 +7,7 @@ pipeline {
 stages{
     stage('Build1'){
       steps{
-        checkout changelog: false, poll: false, scm: scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ganate34/webgoat.git/']])
+        checkout changelog: false, poll: false, scm: scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ganate34/sast-sca-sonar-snyk.git']])
       }
     }
     stage('Build2') {
