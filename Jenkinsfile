@@ -35,12 +35,6 @@ stages{
 		sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=ganate34github -Dsonar.organization=ganate34github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=88cb0a5fb57556c50b136668178348f51c780530'
 			}
         } 
-    stage('install libc 64') {
-            steps {	
-		sh 'sudo apt-get install libc6'
-			}
-        } 
-     
      stage('RunSCAAnalysisUsingSnyk') {
             steps {		
 		withCredentials([string(credentialsId: 'SNYK_TOKEN', variable: 'SNYK_TOKEN')]) {
